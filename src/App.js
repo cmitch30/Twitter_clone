@@ -2,6 +2,7 @@ import Tweet from "./Tweet";
 import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   const [data, setData] = useState([])
@@ -19,7 +20,7 @@ function App() {
   });
 
   return (
-  <div>
+  <div style={{background: '#111111', padding: '30px'}}>
     {data.map(tweet => <Tweet key={tweet.id} {...tweet} />)}
   </div>
   )
